@@ -111,7 +111,7 @@ public class CarConfigurationRepositoryUsingSql implements CarConfigurationRepos
             case "Klimaanlage" -> new Klimaanlage();
             case "Soundsystem" -> new Soundsystem();
             case "Fahrsicherheitssystem" -> new Fahrsicherheitssystem();
-            case "Abgedunkelte Scheiben" -> new AbgedunkelteScheiben();
+            case "AbgedunkelteScheiben" -> new AbgedunkelteScheiben();
             case "Rückfahrkamera" -> new Rueckfahrkamera();
             default -> null;
         };
