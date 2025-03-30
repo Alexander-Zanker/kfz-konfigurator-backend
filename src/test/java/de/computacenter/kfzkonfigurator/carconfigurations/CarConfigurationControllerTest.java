@@ -1,24 +1,21 @@
 package de.computacenter.kfzkonfigurator.carconfigurations;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import de.computacenter.kfzkonfigurator.carconfigurations.model.*;
-import de.computacenter.kfzkonfigurator.carconfigurations.model.sonderausstattungen.Fahrsicherheitssystem;
-import de.computacenter.kfzkonfigurator.carconfigurations.model.sonderausstattungen.Klimaanlage;
-import de.computacenter.kfzkonfigurator.carconfigurations.model.sonderausstattungen.Soundsystem;
+import de.computacenter.kfzkonfigurator.carconfigurations.model.CarConfiguration;
+import de.computacenter.kfzkonfigurator.carconfigurations.model.CarConfigurationTestInstances;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import java.util.List;
-
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 @WebMvcTest(CarConfigurationController.class)
+@AutoConfigureMockMvc(addFilters = false) // disables websecurity filters for tests to run
 class CarConfigurationControllerTest {
     @MockitoBean
     private CarConfigurationService carConfigurationService;
