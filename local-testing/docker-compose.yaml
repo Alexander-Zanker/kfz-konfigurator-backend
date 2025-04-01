@@ -10,7 +10,7 @@ services:
       - ./postgresql/volumes/data:/var/lib/postgresql/data/
 
   kfz-konfigurator:
-    image: 'kfzkonfigurator-backend:0.0.1'
+    image: 'kfzkonfigurator-backend:0.0.2'
     ports:
       - 8080:8080
 
